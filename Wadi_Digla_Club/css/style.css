@@ -1,0 +1,448 @@
+body{
+    margin: auto;
+}
+main{
+    width: 100%;
+    min-height: 2000px;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(180deg ,rgb(10, 10, 10) ,rgb(95, 95, 95));
+    position: fixed;
+    display: flex;
+    top: 0;
+    flex-flow: wrap;
+    justify-content: space-between;
+    z-index: 99;
+}
+#logo{
+    width: 50px;
+    height: 60px;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 40px;
+    padding: 0;
+}
+#logo img{
+    width: 100%;
+    height: 100%;
+    
+    padding: 0;
+}
+header nav{
+    width: 32%;
+    height: 70px;
+    margin-right: 40px;
+    
+}
+
+nav ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: lightgray;
+    text-decoration: none;
+    font-size: 12px;
+}
+/*         ########## End of Header   ########## */
+/*    ############################################# */
+.search{
+    position: fixed;
+    left: 0;
+    top: 25%;
+    height: 50px;
+    width: 40px;
+    z-index: 99;
+    border: 1px solid black;
+    border-radius: 0px 20px 20px 0px;
+    background: black;
+}
+.search .sea{
+    width:180px ;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+.sea input{
+    display: none;
+}
+.search img{
+    margin-top: 5px;
+    width: 28px;
+    margin-left: 10px;
+    height: 32px;
+
+}
+
+.search:hover{
+    width: 228px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s;
+}
+.search:hover .sea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search:hover .sea input{
+    display: block;
+    width: 100%;
+    height: 70%;
+    transition: all 1s;
+
+
+}
+
+/*         ########## End of search bar   ########## */
+/*    ############################################# */
+.bgbn{
+    width: 100%;
+    height: max(750px,50vh);
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 60px;
+
+}
+#acops{
+    position: absolute;
+    width: 75%;
+    bottom: 0;
+    left: 12.5%;
+    height: 130px;
+    display: flex;
+    flex-flow: column wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#acops .acs{
+    margin: 0;
+    padding: 0;
+    width: 21.5% ;
+    height: 140px;
+    background: white;
+    border: 1px solid #FDDD00;
+    border-radius: 10px;
+    display: flex;
+    flex-flow:row wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    
+}
+.acs img{
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+.acs .overlay{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+
+}
+.acs .overlay h1{
+    color: black;
+    font-size: 25px;
+    transition: all 1s;
+}
+.acs:hover .overlay{
+    clip-path: circle(75% at 0 0);
+    background: rgba(255, 230, 1, 0.788);
+    opacity: 1;
+    transition: all 1s;
+    z-index: 99;
+}
+.banner{
+    width: 100%;
+    height: 650px;
+    background: #FDDD00;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    clip-path:circle(55% at 50% 20%) ;
+}
+/*         ########## End of Banner   ########## */
+/*    ############################################# */
+.abm{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction:column ;
+    justify-content: flex-start;
+}
+.about .ti{
+    width: 100%;
+    left: 10%;
+    margin-bottom: 10px;
+}
+.about .ti h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(59, 59, 151);
+}
+.about .ti hr{
+    width: 50%;
+}
+.about .content{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .content #block1{
+    width: 48.5%;
+    height: 170px;    
+}
+.about .content #block2{
+    width: 49%;
+    height: 180px;    
+    border:1px solid black;
+    border-radius:20px 20px 0px 0px;
+    overflow: hidden;
+    background: url(../images/about.jpg);
+    background-position: center;
+}
+#block2 .overlay2{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    clip-path: circle(71% at 50% 50%)  ;
+}
+.about .content #block2:hover .overlay2{
+    clip-path: circle(0% at 50% 50%)  ;
+    background: rgba(255, 255, 255, 0.507);
+    z-index: 99;
+    opacity: 1;
+    transition: all 2s;
+
+}
+.about .content div h1{
+    color: rgb(59, 59, 151);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+.about .content div p{
+    color: rgb(59, 59, 151);
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+/*         ########## End of About us   ########## */
+/*    ############################################# */
+.msc{
+    width: 100%;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    
+}
+.msc .sch{
+    width: 80%;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.msc .sch .he{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.msc .sch h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(59, 59, 151);
+}
+.msc .sch hr{
+    width: 50%;
+}
+.msc .sch .ta{
+    width: 100%;
+}
+.ta table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 10px double black;
+    border-radius: 10%;
+}
+.ta table tr{
+    height: 35px;
+    text-align: center;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.ta table tr th{
+    font-weight: bold;
+    font-size: 30px;
+    background: #FDDD00;
+}
+.ta table tr:nth-of-type(odd){
+    background: #F2E41D;
+
+}
+.ta table tr:nth-of-type(even){
+    background: black;
+    color: white;
+}
+/*         ########## End of Table   ########## */
+/*    ############################################# */
+.mnews{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.mnews .news{
+    width: 80%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mnews .news .he2{
+    width: 100%;
+    height: 125px;
+    margin-bottom: 10px;
+}
+.mnews .news .he2 h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(59, 59, 151);
+}
+.mnews .news .he2 hr{
+    width: 50%;
+}
+.mnews .news .blocks{
+    width: 100%;
+    height: 375px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.blocks .block3{
+    width: 32%;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 5px 2px 10px rgb(139, 139, 139);
+}
+.block3 .ima{
+    margin-top: 10px;
+    width: 90%;
+    height: 70%;
+    background: url(../images/n1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.block3 .p1{
+    width: 98%;
+    height: 30%;
+    margin-left: 5px;
+}
+.block3 .p1 h1{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+.block3 .p1 p{
+    width: 95%;
+    height: 30%;
+    margin: 0;
+}
+/*         ########## End of News   ########## */
+/*    ############################################# */
+.mvdp{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vdp{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: wrap;
+    background: #FDDD00;
+
+}
+.vdp div{
+    width: 48%;
+    height: 96%;
+
+}
+.vdp div img{
+    width: 100%;
+    height: 100%;
+}
+/*         ########## End of video   ########## */
+/*    ############################################# */
+div{
+    width: 100%;
+    height: 400px;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+/*         ########## End of map   ########## */
+/*    ############################################# */
+footer{
+    background: black;
+    color: white;
+    
+}
